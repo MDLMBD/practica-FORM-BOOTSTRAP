@@ -73,36 +73,37 @@
                         </table>
                     </div>
                 </div>
+                <div>
+                <canvas id="myChart"></canvas>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                    labels: ['2026-06-25', '2026-06-26', '2026-06-27', '2026-07-28', '2026-08-29'],
+                    datasets: [{
+                        label: 'Historial de Registros',
+                        data: [74.5, 75.5, 73.5, 67, 65.5],
+                        borderWidth: 1
+                    }]
+                    },
+                    options: {
+                    scales: {
+                        y: {
+                        beginAtZero: true
+                        }
+                    }
+                    }
+                });
+                </script>
             </div>
         </div>
-        <div>
-            <canvas id="myChart"></canvas>
-            </div>
-
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <script>
-            const ctx = document.getElementById('myChart');
-
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                labels: ['2026-06-25', '2026-06-26', '2026-06-27', '2026-07-28', '2026-08-29'],
-                datasets: [{
-                    label: 'Historial de Registros',
-                    data: [74.5, 75.5, 73.5, 67, 65.5],
-                    borderWidth: 1
-                }]
-                },
-                options: {
-                scales: {
-                    y: {
-                    beginAtZero: true
-                    }
-                }
-                }
-            });
-            </script>
+        
 
     </div>   
 </body>
